@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">RentFlat</string>
+    <string name="tittle1">¿Vives lejos de la universidad?</string>
+    <string name="tittle2">Tenemos mucha variedad</string>
+    <string name="tittle3">Precios cómodos para todos</string>
+    <string name="tittleSub1">No te pierdas la oportunidad de poder vivir cerca de tu universidad</string>
+    <string name="tittleSub2">Encuentra el inmueble de tu preferencia y de tu agrado tenemos mucha variedad, departamentos o habitacion, elegi el que te guste más</string>
+    <string name="tittleSub3">Si te preocupa el precio, no te preocupes, aqui encuentras variedad, en diferente sitios segun tu agrado</string>
+    <string name="title_activity_propi_new_inmueble">PropiNewInmuebleActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
 </resources>
