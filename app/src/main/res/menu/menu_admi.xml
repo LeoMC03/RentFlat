@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/btnNavMenuAdmiPrincipal"
+        android:title="Principal"
+        android:icon="@drawable/menu_icon_home"/>
+    <item
+        android:id="@+id/btnNavMenuAdmiDenuncias"
+        android:title="Denuncias"
+        android:icon="@drawable/menu_icon_denuncias"/>
+    <item
+        android:id="@+id/btnNavMenuAdmiPerfil"
+        android:icon="@drawable/menu_icon_perfil"
+        android:title="Perfil"/>
+</menu>
