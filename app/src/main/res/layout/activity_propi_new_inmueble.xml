@@ -14,7 +14,7 @@
         android:layout_height="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:menu="@menu/menu_cliente" />
+        app:menu="@menu/menu_propi" />
 
     <ScrollView
         android:layout_width="match_parent"

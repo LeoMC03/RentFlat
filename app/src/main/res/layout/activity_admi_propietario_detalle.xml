@@ -6,16 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/azul_main"
     tools:context=".Administrador.AdmiPropietarioDetalleActivity">
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavPerfilCliente"
-        style="@style/BottomNav"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu_cliente"/>
 
     <ScrollView
         android:layout_width="match_parent"
