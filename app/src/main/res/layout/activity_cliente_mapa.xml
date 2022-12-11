@@ -23,7 +23,7 @@
             android:layout_height="match_parent"
             android:src="@drawable/btn_atras"
             android:layout_marginStart="8dp"
-            android:layout_gravity="start||center_vertical"
+
             android:background="?actionBarItemBackground"/>
 
 

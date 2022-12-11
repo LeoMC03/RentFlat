@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvItemImageUpload"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="16dp"
+        android:translationZ="0dp"
+        >
+
+        <ImageView
+            android:id="@+id/ImageUpload"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/azul_main"
+            android:scaleType="center"
+            android:src="@drawable/ic_camera" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageButton
+        android:id="@+id/btnrmvImageUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:background="?actionBarItemBackground"
+        android:clickable="true"
+        android:src="@drawable/btn_remove"
+        android:translationZ="10dp" />
+
+</FrameLayout>

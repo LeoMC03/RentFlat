@@ -38,46 +38,60 @@
                 android:textSize="15sp"
                 android:text="¿No tienes una cuenta? Registrate" />
 
-            <TextView
+            <EditText
                 android:layout_marginTop="10dp"
-                android:id="@+id/tvNombres"
+                android:id="@+id/etNombresRegister"
                 style="@style/InputBlue"
                 android:layout_width="273dp"
                 android:layout_height="37dp"
                 android:hint="Nombres"
+                android:inputType="text"
                 android:drawableStart="@drawable/ic_name"/>
 
-            <TextView
+            <EditText
                 android:layout_marginTop="10dp"
-                android:id="@+id/tvApellidos"
+                android:id="@+id/etApellidosRegister"
                 style="@style/InputBlue"
                 android:layout_width="273dp"
                 android:layout_height="37dp"
                 android:hint="Apellidos"
+                android:inputType="text"
                 android:drawableStart="@drawable/ic_name"/>
 
-            <TextView
+            <EditText
                 android:layout_marginTop="10dp"
-                android:id="@+id/textView3"
+                android:id="@+id/etdniRegister"
                 style="@style/InputBlue"
                 android:layout_width="273dp"
                 android:layout_height="37dp"
-                android:text="Dni"
                 android:hint="Dni"
+                android:inputType="number"
+                android:drawableStart="@drawable/ic_dni"/>
+
+            <EditText
+                android:layout_marginTop="10dp"
+                android:id="@+id/etcelRegister"
+                style="@style/InputBlue"
+                android:layout_width="273dp"
+                android:layout_height="37dp"
+                android:hint="Celular"
+                android:inputType="number"
                 android:drawableStart="@drawable/ic_dni"/>
 
             <Spinner
-                android:layout_marginTop="10dp"
-                android:id="@+id/textView3"
+                android:id="@+id/spinnerRolesRegister"
                 style="@style/InputBlue"
                 android:layout_width="273dp"
                 android:layout_height="37dp"
-                android:text="TextView"
-                android:drawableStart="@drawable/ic_pwd"/>
-
-            <TextView
                 android:layout_marginTop="10dp"
-                android:id="@+id/tvCorreo"
+                android:drawableStart="@drawable/ic_pwd"
+                android:entries="@array/rol"
+                android:spinnerMode="dialog"
+                android:text="TextView" />
+
+            <EditText
+                android:layout_marginTop="10dp"
+                android:id="@+id/etCorreoRegister"
                 style="@style/InputBlue"
                 android:layout_width="273dp"
                 android:layout_height="37dp"
@@ -85,18 +99,18 @@
                 android:inputType="textEmailAddress"
                 android:drawableStart="@drawable/ic_mail"/>
 
-            <TextView
+            <EditText
                 android:layout_marginTop="10dp"
-                android:id="@+id/textView3"
+                android:id="@+id/etcontrasenaRegister"
                 style="@style/InputBlue"
                 android:layout_width="273dp"
                 android:layout_height="37dp"
                 android:hint="Contraseña"
                 android:inputType="textPassword"
                 android:drawableStart="@drawable/ic_pwd"/>
-            <TextView
+            <EditText
                 android:layout_marginTop="10dp"
-                android:id="@+id/textView3"
+                android:id="@+id/etcontrasenaRepetidaRegister"
                 style="@style/InputBlue"
                 android:layout_width="273dp"
                 android:layout_height="37dp"
@@ -108,7 +122,7 @@
                 android:fontFamily="@font/inter_regular"
                 android:backgroundTint="#6300BFA5"
                 android:layout_marginTop="15dp"
-                android:id="@+id/button"
+                android:id="@+id/buttonRegistar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Registrarse" />
@@ -122,7 +136,7 @@
                 android:text="¿Ya tienes una cuenta?" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/buttonIniciarSesion"
                 android:backgroundTint="#362348AF"
                 android:fontFamily="@font/inter_regular"
                 android:layout_marginVertical="20dp"

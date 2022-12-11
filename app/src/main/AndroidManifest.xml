@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="pucp.edu.rentflat" >
+    package="pucp.edu.rentflat">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -12,103 +18,106 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RentFlat"
-        tools:targetApi="31" >
+        tools:targetApi="31">
         <activity
-            android:name=".PropiNewInmuebleActivity"
+            android:name=".Propietario.PropiPerfilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Propietario.PropiNewInmuebleActivity"
             android:exported="false"
             android:label="@string/title_activity_propi_new_inmueble"
-            android:theme="@style/Theme.RentFlat.NoActionBar" >
+            android:theme="@style/Theme.RentFlat.NoActionBar">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".PropiAlquileresActivity"
-            android:exported="false" >
+            android:name=".Propietario.PropiAlquileresActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".AdmiPerfilActivity"
-            android:exported="false" >
+            android:name=".Administrador.AdmiPerfilActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".AdmiDenunciasDetalleActivity"
-            android:exported="false" >
+            android:name=".Administrador.AdmiDenunciasDetalleActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".AdminDenunciasActivity"
-            android:exported="false" >
+            android:name=".Administrador.AdminDenunciasActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".AdmiPropietarioDetalleActivity"
-            android:exported="false" >
+            android:name=".Administrador.AdmiPropietarioDetalleActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".AdmiPropietariosActivity"
-            android:exported="false" >
+            android:name=".Administrador.AdmiPropietariosActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ClientePerfilActivity"
-            android:exported="false" >
+            android:name=".Cliente.ClientePerfilActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ClienteMapaSearchActivity"
-            android:exported="false" >
+            android:name=".Cliente.ClienteMapaSearchActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ClienteMapaActivity"
-            android:exported="false" >
+            android:name=".Cliente.ClienteMapaActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ClienteInmuebleInfoActivity"
-            android:exported="false" >
+            android:name=".Cliente.ClienteInmuebleInfoActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".InmueblesActivity"
-            android:exported="false" >
+            android:name=".Desconocido.RegisterActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".RegisterActivity"
-            android:exported="false" >
+            android:name=".Cliente.ClienteInmueblesActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".Desconocido.OnboardingActivity"
-            android:exported="true" >
+            android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -121,14 +130,14 @@
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:exported="false" >
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true" >
+            android:exported="true">
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->

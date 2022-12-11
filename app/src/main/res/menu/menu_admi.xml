@@ -2,15 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/btnNavMenuAdmiPrincipal"
+        android:id="@+id/pageAdmiPrincipal"
         android:title="Principal"
         android:icon="@drawable/menu_icon_home"/>
     <item
-        android:id="@+id/btnNavMenuAdmiDenuncias"
+        android:id="@+id/pageAdmiDenuncias"
         android:title="Denuncias"
         android:icon="@drawable/menu_icon_denuncias"/>
     <item
-        android:id="@+id/btnNavMenuAdmiPerfil"
+        android:id="@+id/pageAdmiPerfil"
         android:icon="@drawable/menu_icon_perfil"
         android:title="Perfil"/>
 </menu>

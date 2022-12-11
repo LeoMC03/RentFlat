@@ -16,8 +16,8 @@
         android:layout_gravity="center_vertical">
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/ivAdmiUsuarioFoto"
-            android:layout_width="150dp"
+            android:id="@+id/ivInmuebleFotoCard"
+            android:layout_width="144dp"
             android:layout_height="match_parent"
             android:layout_marginEnd="15dp"
             android:adjustViewBounds="true"
@@ -32,15 +32,27 @@
             android:layout_gravity="center"
             android:layout_marginVertical="10dp">
 
+            <Button
+                android:id="@+id/etStatusCard"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="84dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10dp"
+                android:clickable="false"
+                android:text="Alquilado"
+                android:textSize="8sp" />
+
             <TextView
-                android:id="@+id/tvAdmiUsuarioNombre"
+                android:id="@+id/tvTipoCard"
                 style="@style/WhiteMonstMedium15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Habitación" />
 
             <TextView
-                android:id="@+id/tvAdmiUsuarioNickname"
+                android:id="@+id/tvDistritoCard"
                 style="@style/BlueLexMedium15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -54,16 +66,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/tvAdmiUsuarioDireccion"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/BlueLexMedium15"
-                    android:text="Amoblado: "
-                    android:layout_gravity="center"
-                    android:textColor="@color/white" />
-
-                <TextView
-                    android:id="@+id/tvAdmiUsuarioDireccion"
+                    android:id="@+id/tvAmobladoCard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/BlueLexMedium15"
@@ -72,11 +75,21 @@
                     android:textColor="@color/white" />
             </LinearLayout>
 
+            <Button
+                android:id="@+id/btnVerDetalles"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_gravity="end"
+                android:text="Ver detalles"
+                android:textSize="9sp" />
+
         </LinearLayout>
+
         <View
-            android:layout_width="match_parent"
+            android:layout_width="8dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"/>
+             />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -86,27 +99,6 @@
             android:layout_marginEnd="10dp"
             android:layout_marginVertical="10dp">
 
-
-            <Button
-                android:id="@+id/button3"
-                style="@style/Widget.Material3.Button"
-                android:layout_width="80dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:clickable="false"
-                android:text="Alquilado"
-                android:textSize="8sp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="10dp"/>
-
-            <Button
-                android:id="@+id/button3"
-                style="@style/Widget.Material3.Button.TextButton"
-                android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:layout_gravity="end"
-                android:text="Ver detalles"
-                android:textSize="9sp" />
 
         </LinearLayout>
 

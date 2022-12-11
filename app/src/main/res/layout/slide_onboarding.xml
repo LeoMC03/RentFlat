@@ -60,7 +60,6 @@
     <TextView
         android:id="@+id/tvSubTittle"
         android:textColor="@color/white"
-        android:gravity="start||center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"

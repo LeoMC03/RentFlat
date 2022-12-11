@@ -8,7 +8,7 @@
     android:background="@color/azul_main">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavPerfilCliente"
+        android:id="@+id/bottomNavPropiAdmin"
         style="@style/BottomNav"
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -21,7 +21,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavMenuCliente">
+        android:layout_marginBottom="64dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavPropiAdmin">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -61,83 +62,12 @@
                 android:text="Lista de propietarios"
                 android:textSize="25sp" />
 
-            <GridLayout
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleviewPropietario"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:columnCount="2"
-                android:rowCount="5"
-                android:orientation="horizontal"
-                android:useDefaultMargins="true"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp">
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_height="120dp"
-                    app:strokeWidth="1dp"
-                    app:strokeColor="@color/azul_100"
-                    android:layout_columnWeight="1"
-                    android:layout_marginHorizontal="8dp"
-                    android:layout_marginVertical="16dp"
-                    app:cardBackgroundColor="#00FFFFFF"
-                    app:cardCornerRadius="16dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginBottom="8dp">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="#2AEA3570"
-                        android:scaleType="center"
-                        android:src="@drawable/ic_location" />
-                </com.google.android.material.card.MaterialCardView>
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_height="120dp"
-                    app:strokeWidth="1dp"
-                    app:strokeColor="@color/azul_100"
-                    android:layout_columnWeight="1"
-                    android:layout_marginHorizontal="8dp"
-                    android:layout_marginVertical="16dp"
-                    app:cardBackgroundColor="#00FFFFFF"
-                    app:cardCornerRadius="16dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginBottom="8dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="#2AEA3570"
-                        android:scaleType="center"
-                        android:src="@drawable/ic_location" />
-                </com.google.android.material.card.MaterialCardView>
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_height="120dp"
-                    app:strokeWidth="1dp"
-                    app:strokeColor="@color/azul_100"
-                    android:layout_columnWeight="1"
-                    android:layout_marginHorizontal="8dp"
-                    android:layout_marginVertical="16dp"
-                    app:cardBackgroundColor="#00FFFFFF"
-                    app:cardCornerRadius="16dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginBottom="8dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="#2AEA3570"
-                        android:scaleType="center"
-                        android:src="@drawable/ic_location" />
-                </com.google.android.material.card.MaterialCardView>
-        </GridLayout>
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="20dp"
+                tools:listitem="@layout/card_propietario" />
 
 
         </LinearLayout>

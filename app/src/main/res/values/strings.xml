@@ -12,8 +12,28 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string-array name="tipo" >
+        <item >Departamento</item>
+        <item >Cuarto</item>
+    </string-array>
+
+    <string-array name="distrito">
+        <item >Pueblo Libre</item>
+        <item >San Miguel</item>
+        <item >Jesus Maria</item>
+        <item >Magdalena</item>
+    </string-array>
+
+    <string-array name="amoblado" >
+        <item >Amoblado</item>
+        <item >No Amoblado</item>
+    </string-array>
+
+    <string-array name="rol" >
+        <item >propietario</item>
+        <item >cliente</item>
+    </string-array>
 
 </resources>

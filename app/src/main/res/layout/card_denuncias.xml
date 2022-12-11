@@ -33,14 +33,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <TextView
-                android:id="@+id/tvUserFriendName"
+                android:id="@+id/tvclienteCardDenuncia"
                 style="@style/WhiteMonstMedium15"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="Cliente: Leo Mora"/>
             <TextView
-                android:id="@+id/tvUserFriendNickname"
+                android:id="@+id/tvpropiCardDenuncia"
                 style="@style/WhiteMonstMedium15"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -49,6 +49,7 @@
                 android:text="Propietario: Jose Augusto"/>
 
             <TextView
+                android:id="@+id/tvfechaDenuncia"
                 style="@style/WhiteMonstMedium15"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -64,7 +65,7 @@
                 android:orientation="horizontal"
                 android:gravity="end">
                 <Button
-                    android:id="@+id/btnUserFriendVerPerfil"
+                    android:id="@+id/btnVermasDenuncia"
                     style="@style/Widget.Material3.Button.TextButton"
                     android:textColor="@color/white"
                     android:textStyle="bold"

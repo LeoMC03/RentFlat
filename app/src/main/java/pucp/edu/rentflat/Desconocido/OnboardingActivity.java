@@ -10,6 +10,7 @@ import android.text.Html;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -39,7 +40,7 @@ public class OnboardingActivity extends AppCompatActivity {
         }
     };
     final Handler slideHandler = new Handler();
-
+    Button btnempezar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +58,15 @@ public class OnboardingActivity extends AppCompatActivity {
         changeDotColor(0);
         slideHandler.postDelayed(slideRunnable,SLIDE_TIME);
         vpSlider.addOnPageChangeListener(pageChangeListener);
+        btnempezar = findViewById(R.id.btnEmpezar);
+
+        btnempezar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(OnboardingActivity.this,LoginActivity.class));
+                finish();
+            }
+        });
     }
 
     private void addDots(){

@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/cardFriendSugerencia"
     android:layout_width="200dp"
@@ -9,7 +8,8 @@
     app:strokeColor="#BBDEFB"
     app:cardBackgroundColor="#B2EBF2"
     android:layout_marginEnd="10dp"
-    android:clickable="true">
+    android:clickable="true"
+    android:layout_marginBottom="8dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,7 +29,7 @@
             />
 
         <TextView
-            android:id="@+id/tvSugeridosNombre"
+            android:id="@+id/tvNombreCardProp"
             style="@style/BlueLexMedium15"
             android:textSize="20dp"
             android:layout_width="wrap_content"
@@ -46,15 +46,24 @@
             android:orientation="horizontal"
             android:gravity="center">
 
-            <ImageView
-                android:layout_width="70dp"
-                android:layout_height="37dp"
+            <Button
+                android:id="@+id/btnEstadoCardProp"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="86dp"
+                android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:layout_marginStart="10dp"
-                app:srcCompat="@drawable/ic_active" />
+                android:clickable="false"
+                android:text="bloqueado"
+                android:textSize="7sp"
+                android:backgroundTint="#ff0000"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10dp"/>
+
+
 
 
             <Button
+                android:id="@+id/btnVermas"
                 style="@style/Widget.Material3.Button.TextButton"
                 android:layout_width="wrap_content"
                 android:layout_height="37dp"

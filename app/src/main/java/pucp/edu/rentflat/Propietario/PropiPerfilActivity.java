@@ -1,4 +1,4 @@
-package pucp.edu.rentflat.Administrador;
+package pucp.edu.rentflat.Propietario;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,30 +19,30 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import pucp.edu.rentflat.Entity.Usuario;
 import pucp.edu.rentflat.LoginActivity;
-import pucp.edu.rentflat.Propietario.PropiPerfilActivity;
 import pucp.edu.rentflat.R;
 
-public class AdmiPerfilActivity extends AppCompatActivity {
+public class PropiPerfilActivity extends AppCompatActivity {
 
-    TextView nombre,correo,dni,cel;
+    TextView nombre,dni,correo,cel;
+    BottomNavigationView bottomNavigationView;
 
     FirebaseFirestore firestore;
     FirebaseAuth firebaseAuth;
-    BottomNavigationView bottomNavigationView;
     Button btncerrar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admi_perfil);
+        setContentView(R.layout.activity_propi_perfil);
 
         firestore = FirebaseFirestore.getInstance();
         firebaseAuth = FirebaseAuth.getInstance();
 
-        nombre = findViewById(R.id.tvnombreAdmi);
-        cel = findViewById(R.id.tvcelAdmi);
-        correo = findViewById(R.id.tvcorreoAdmi);
-        dni = findViewById(R.id.tvdniAdmi);
-        btncerrar = findViewById(R.id.button2);
+        nombre = findViewById(R.id.tvnombreperfilpropi);
+        dni = findViewById(R.id.tvdniperfilpropi);
+        correo = findViewById(R.id.tvcorreoperfilpropi);
+        cel = findViewById(R.id.tvcelperfilpropi);
+        btncerrar = findViewById(R.id.button3);
 
         firestore.collection("usuarios").document(firebaseAuth.getUid()).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
@@ -56,11 +56,12 @@ public class AdmiPerfilActivity extends AppCompatActivity {
 
             }
         });
+
         btncerrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 firebaseAuth.signOut();
-                startActivity(new Intent(AdmiPerfilActivity.this, LoginActivity.class));
+                startActivity(new Intent(PropiPerfilActivity.this, LoginActivity.class));
                 finish();
             }
         });
@@ -69,26 +70,32 @@ public class AdmiPerfilActivity extends AppCompatActivity {
     }
 
     public void setBottomNavigationView(){
-        bottomNavigationView = findViewById(R.id.bottomNavPerfilAdmi);
-        bottomNavigationView.setSelectedItemId(R.id.pageAdmiPerfil);
+        bottomNavigationView = findViewById(R.id.bottomNavPerfilPropi);
+        bottomNavigationView.setSelectedItemId(R.id.pagePerfil);
         bottomNavigationView.clearAnimation();
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch(item.getItemId()) {
-                    case R.id.pageAdmiPrincipal:
-                        startActivity(new Intent(AdmiPerfilActivity.this, AdmiPropietariosActivity.class));
+                    case R.id.pagePrincipal:
+                        Intent intent = new Intent(PropiPerfilActivity.this,PropiAlquileresActivity.class);
+                        startActivity(intent);
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.pageAdmiDenuncias:
-                        startActivity(new Intent(AdmiPerfilActivity.this,AdminDenunciasActivity.class));
+                    case R.id.pageGestion:
+                        Intent i = new Intent(PropiPerfilActivity.this,PropiAlquileresActivity.class);
+                        i.putExtra("lista","lista");
+                        startActivity(i);
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.pageAdmiPerfil:
+                    case R.id.pagePerfil:
                         return true;
                 }
                 return false;
             }
         });
     }
+
+
+
 }

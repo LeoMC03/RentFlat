@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1085609122252",
+    "project_id": "rentflat-ba697",
+    "storage_bucket": "rentflat-ba697.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1085609122252:android:8e8c11697bf5ab4d9fa569",
+        "android_client_info": {
+          "package_name": "pucp.edu.rentflat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1085609122252-efun40b3rfmbddb09iphmdekk96ghmbu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4j0TvTFbbFtlC7hkpw5O2hQjYLwA07IU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1085609122252-efun40b3rfmbddb09iphmdekk96ghmbu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -9,8 +9,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavMenuCliente">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -33,7 +32,6 @@
                     android:layout_height="match_parent"
                     android:src="@drawable/btn_atras"
                     android:layout_marginStart="8dp"
-                    android:layout_gravity="start||center_vertical"
                     android:background="?actionBarItemBackground"/>
 
 
@@ -87,7 +85,7 @@
                     android:layout_height="250dp"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
-                    android:layout_gravity="center_horizontal"
+
                     android:layout_marginTop="-18dp"
 
                     android:padding="40dp"
@@ -97,6 +95,7 @@
             </RelativeLayout>
 
             <TextView
+                android:id="@+id/tvnombrePropi"
                 style="@style/InputBlue"
                 android:drawableStart="@drawable/ic_pen"
                 android:layout_width="match_parent"
@@ -104,15 +103,9 @@
                 android:layout_marginVertical="10dp"
                 android:layout_marginHorizontal="20dp"
                 android:text="TextView" />
+
             <TextView
-                style="@style/InputBlue"
-                android:drawableStart="@drawable/ic_location"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="10dp"
-                android:layout_marginHorizontal="20dp"
-                android:text="TextView" />
-            <TextView
+                android:id="@+id/tvcelPropi"
                 style="@style/InputBlue"
                 android:drawableStart="@drawable/ic_phone"
                 android:layout_width="match_parent"
@@ -121,6 +114,7 @@
                 android:layout_marginHorizontal="20dp"
                 android:text="TextView" />
             <TextView
+                android:id="@+id/tvcorreoPropi"
                 style="@style/InputBlue"
                 android:drawableStart="@drawable/ic_mail"
                 android:layout_width="match_parent"
@@ -129,6 +123,7 @@
                 android:layout_marginHorizontal="20dp"
                 android:text="TextView" />
             <TextView
+                android:id="@+id/tvdniPropi"
                 style="@style/InputBlue"
                 android:drawableStart="@drawable/ic_dni"
                 android:layout_width="match_parent"
@@ -138,6 +133,7 @@
                 android:text="TextView" />
 
             <Button
+                android:id="@+id/btnbloquear"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Bloquear"

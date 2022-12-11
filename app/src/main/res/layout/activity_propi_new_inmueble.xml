@@ -7,20 +7,12 @@
     android:background="@color/azul_main"
     tools:context=".Propietario.PropiNewInmuebleActivity">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavAlquiPropi"
-        style="@style/BottomNav"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:menu="@menu/menu_propi" />
+
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="60dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavMenuCliente">
+        android:layout_marginBottom="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -60,8 +52,21 @@
                 android:text="Lista de alquileres"
                 android:textSize="25sp" />
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCreateInmuebleFotos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="0.9"
+                android:focusable="true"
+                tools:itemCount="0"
+                tools:listitem="@layout/item_foto" >
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
             <GridLayout
-                android:id="@+id/glCreatePet"
+                android:id="@+id/glCreateInmueble"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
@@ -87,6 +92,7 @@
                     android:layout_marginBottom="8dp">
 
                     <ImageView
+                        android:id="@+id/image"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#2A01F4D0"
@@ -115,76 +121,172 @@
                 </com.google.android.material.card.MaterialCardView>
             </GridLayout>
 
-            <Button
-                android:id="@+id/button4"
-                android:layout_width="wrap_content"
+            <ProgressBar
+                android:id="@+id/pbAddPhotoInmueble"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:backgroundTint="#6300BFA5"
-                android:layout_marginHorizontal="20dp"
-                android:text="Agregar imagen" />
+                android:layout_marginBottom="8dp"
+                android:max="100"
+                android:outlineAmbientShadowColor="#2A01F4D0"
+                android:progress="0"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:gravity="end">
+
+                <ImageButton
+                    android:id="@+id/ibCreateInmueblePhotoGal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="uploadPhotoFromDocument"
+                    android:src="@drawable/ic_galeria" />
+
+                <ImageButton
+                    android:id="@+id/ibCreateInmueblePhotoCam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="uploadPhotoFromCamera"
+                    android:src="@drawable/ic_foto_edit" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#011F37"
+                android:layout_marginHorizontal="20dp">
+                <com.denzcoskun.imageslider.ImageSlider
+                    android:id="@+id/isInmueblesImages"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginVertical="15dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:backgroundTint="#0167BC"
+                    app:iss_auto_cycle="true"
+                    app:iss_delay="2000"
+                    app:iss_period="2000"
+                    app:iss_placeholder="@drawable/ic_name"
+                    app:iss_title_background="@string/app_name">
+                </com.denzcoskun.imageslider.ImageSlider>
+            </LinearLayout>
 
             <Spinner
-                android:id="@+id/spinner"
+                android:id="@+id/spTipoInmuRegister"
                 style="@style/InputBlue"
-                android:layout_marginVertical="8dp"
-                android:layout_marginHorizontal="20dp"
                 android:layout_width="match_parent"
-                android:layout_height="40dp" />
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="8dp"
+                android:entries="@array/tipo"
+                android:spinnerMode="dialog" />
 
             <Spinner
-                android:id="@+id/spinner"
+                android:id="@+id/spDistrInmuRegister"
                 style="@style/InputBlue"
-                android:layout_marginVertical="8dp"
-                android:layout_marginHorizontal="20dp"
                 android:layout_width="match_parent"
-                android:layout_height="40dp" />
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="8dp"
+                android:entries="@array/distrito"
+                android:spinnerMode="dialog" />
 
-            <TextView
-                android:id="@+id/textView"
+            <EditText
+                android:id="@+id/etUbicacionInmuRegister"
                 style="@style/InputBlue"
                 android:layout_marginVertical="8dp"
                 android:layout_marginHorizontal="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:inputType="text"
                 android:drawableStart="@drawable/ic_location"
-                android:text="Ubicación"
+                android:hint="Ubicación"
                 />
 
             <Spinner
-                android:id="@+id/spinner"
+                android:id="@+id/spAmobInmuRegister"
                 style="@style/InputBlue"
-                android:layout_marginVertical="8dp"
-                android:layout_marginHorizontal="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="40dp" />
-
-            <TextView
-                style="@style/InputBlue"
-                android:layout_marginVertical="8dp"
-                android:layout_marginHorizontal="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="8dp"
+                android:entries="@array/amoblado"
+                android:spinnerMode="dialog" />
+
+            <EditText
+                android:id="@+id/etPrecioInmuRegister"
+                style="@style/InputBlue"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="8dp"
                 android:drawableStart="@drawable/ic_money"
-                android:text="Precio"
-                />
-            <TextView
+                android:hint="Precio (soles)"
+                android:inputType="number" />
+            <EditText
+                android:id="@+id/etDetInmuRegister"
                 style="@style/InputBlue"
                 android:layout_marginVertical="8dp"
                 android:layout_marginHorizontal="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:drawableStart="@drawable/ic_menu"
-                android:text="Detalles"
+                android:inputType="textMultiLine"
+                android:lines="4"
+                android:hint="Detalles"
                 />
 
             <Button
+                android:id="@+id/buttonEstado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="2dp"
+                android:backgroundTint="#4B018786"
+                android:layout_gravity="center"
+                android:layout_marginStart="90dp"
+                android:visibility="gone"
+                android:text="Alquilado" />
+            <Button
+                android:id="@+id/buttonRegistrarInmu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="10dp"
                 android:text="Agregar"
                 android:backgroundTint="#4B018786"
                 android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginStart="50dp"
+                android:layout_gravity="center">
+                <Button
+                    android:id="@+id/buttonEditarInmu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:text="Editar"
+                    android:visibility="gone"
+                    android:backgroundTint="#4B018786"
+                    android:layout_gravity="center"/>
+                <Button
+                    android:id="@+id/buttonEliminarInmu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:text="Eliminar"
+                    android:visibility="gone"
+                    android:layout_marginStart="80dp"
+                    android:backgroundTint="#4B018786"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
 
 
         </LinearLayout>
